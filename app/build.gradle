@@ -1,11 +1,10 @@
-plugins {
-    id("com.android.application")
-    kotlin("android")
-    kotlin("android.extensions")
-}
+apply plugin: "com.android.application"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-android-extensions"
 
 android {
     compileSdkVersion(28)
+
     defaultConfig {
         applicationId = "com.rafakob.bitwarden"
         minSdkVersion(21)
@@ -15,15 +14,31 @@ android {
         testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
     }
 
+    lintOptions {
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        test.java.srcDirs += 'src/test/kotlin'
+    }
+
     buildTypes {
-        getByName("release") {
-            isMinifyEnabled = false
+        release {
+            minifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
         }
     }
 }
 
 dependencies {
+    implementation project(":crypto")
+
     implementation(Deps.kotlin)
     implementation(Deps.androidAppCompat)
     implementation(Deps.androidCoreKtx)
