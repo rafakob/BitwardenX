@@ -1,6 +1,7 @@
 apply plugin: "com.android.application"
 apply plugin: "kotlin-android"
 apply plugin: "kotlin-android-extensions"
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion(28)
@@ -11,7 +12,8 @@ android {
         targetSdkVersion(28)
         versionCode = 1
         versionName = "1.0"
-        testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunnerArguments clearPackageData: 'true'
     }
 
     lintOptions {
@@ -25,15 +27,51 @@ android {
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
+        debug.java.srcDirs += 'src/debug/kotlin'
+        mock.java.srcDirs += 'src/mock/kotlin'
         test.java.srcDirs += 'src/test/kotlin'
+        androidTest.java.srcDirs += 'src/androidTest/kotlin'
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('bitwarden-debug.jks')
+            keyAlias 'bitwarden'
+            keyPassword 'bitwarden'
+            storePassword 'bitwarden'
+        }
     }
 
     buildTypes {
         release {
-            minifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
+            debuggable false
+            signingConfig signingConfigs.release
+            postprocessing {
+                removeUnusedCode true
+                removeUnusedResources true
+                obfuscate true
+                optimizeCode true
+                proguardFiles 'proguard-rules.pro', 'proguard-rules-test.pro'
+            }
+        }
+        debug {
+            debuggable true
+            applicationIdSuffix ".debug"
+            signingConfig signingConfigs.release
+        }
+        mock {
+            debuggable true
+            applicationIdSuffix ".mock"
+            signingConfig signingConfigs.release
+            matchingFallbacks = ['debug']
         }
     }
+
+    testOptions {
+        execution 'ANDROIDX_TEST_ORCHESTRATOR'
+    }
+
+    testBuildType "mock"
 }
 
 dependencies {
@@ -43,9 +81,17 @@ dependencies {
     implementation(Deps.androidAppCompat)
     implementation(Deps.androidCoreKtx)
     implementation(Deps.constraintLayout)
+    implementation Deps.daggerAndroid
+    implementation Deps.daggerAndroidSupport
+
+    kapt Deps.daggerCompiler
+    kapt Deps.daggerAndroidProcessor
 
     testImplementation(TestDeps.junit)
 
     androidTestImplementation(TestDeps.espressoRunner)
     androidTestImplementation(TestDeps.espressoCore)
+    androidTestImplementation TestDeps.espressoRules
+
+    androidTestUtil TestDeps.orchestrator
 }

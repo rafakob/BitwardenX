@@ -1,3 +1,5 @@
+apply plugin: 'com.github.ben-manes.versions'
+
 buildscript {
     repositories {
         google()
@@ -7,6 +9,7 @@ buildscript {
     dependencies {
         classpath(Deps.pluginAndroid)
         classpath(Deps.pluginKotlin)
+        classpath(Deps.pluginVersions)
     }
 }
 
