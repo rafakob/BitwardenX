@@ -11,9 +11,9 @@ internal class SpongyCastleKeyDerivation : KeyDerivation {
         private const val KEY_LENGTH = 256
     }
 
-    override fun deriveKey(password: String, salt: String, type: KdfType, iterations: Int): ByteArray {
+    override fun deriveKey(password: ByteArray, salt: ByteArray, iterations: Int, type: KdfType): ByteArray {
         val generator = createGenerator(type)
-        generator.init(password.toByteArray(Charsets.UTF_8), salt.toByteArray(Charsets.UTF_8), iterations)
+        generator.init(password, salt, iterations)
 
         return (generator.generateDerivedMacParameters(KEY_LENGTH) as KeyParameter).key
     }

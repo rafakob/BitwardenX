@@ -4,7 +4,7 @@ import com.rafakob.bitwarden.crypto.CryptoKey
 import com.rafakob.bitwarden.crypto.exceptions.InvalidEncryptionType
 import org.spongycastle.util.encoders.Base64
 
-internal class DefaultCryptoKeyFactory : CryptoKeyFactory {
+class DefaultCryptoKeyFactory : CryptoKeyFactory {
 
     override fun create(rawBytes: ByteArray, encryptionType: EncryptionType?): CryptoKey {
 
