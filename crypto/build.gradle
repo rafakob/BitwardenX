@@ -1,10 +1,5 @@
 apply from: "../module.gradle"
-apply plugin: 'kotlin-kapt'
 
 dependencies {
-    api project(':scope')
-
     implementation(Deps.spongyCastle)
-
-    kapt Deps.daggerCompiler
 }
