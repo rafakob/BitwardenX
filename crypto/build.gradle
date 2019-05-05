@@ -4,7 +4,10 @@ apply plugin: 'kotlin-kapt'
 dependencies {
     api project(':scope')
 
-    implementation(Deps.spongyCastle)
+    api(Deps.spongyCastle)
+    api("at.favre.lib:hkdf:1.0.2")
+
+
 
     kapt Deps.daggerCompiler
 }
