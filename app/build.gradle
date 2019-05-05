@@ -78,6 +78,7 @@ dependencies {
     implementation project(":base")
     implementation project(":splash")
     implementation project(":crypto")
+    implementation project(":environment")
 
     implementation(Deps.kotlin)
     implementation(Deps.androidAppCompat)

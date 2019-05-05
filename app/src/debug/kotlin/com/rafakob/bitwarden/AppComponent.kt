@@ -1,6 +1,7 @@
 package com.rafakob.bitwarden
 
 import com.rafakob.bitwarden.crypto.CryptoModule
+import com.rafakob.bitwarden.environment.EnvironmentModule
 import com.rafakob.bitwarden.scope.AppScope
 import dagger.Component
 import dagger.android.AndroidInjector
@@ -11,7 +12,8 @@ import dagger.android.support.AndroidSupportInjectionModule
     modules = [
         AndroidSupportInjectionModule::class,
         AppModule::class,
-        CryptoModule::class
+        CryptoModule::class,
+        EnvironmentModule::class
     ]
 )
 interface AppComponent : AndroidInjector<BitwardenApplication> {

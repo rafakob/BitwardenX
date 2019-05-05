@@ -1,1 +1,1 @@
-include ':app', ':crypto', ':scope', ':base', ':splash'
+include ':app', ':crypto', ':scope', ':base', ':splash', ':environment'
