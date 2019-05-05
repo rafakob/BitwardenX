@@ -1,2 +1,1 @@
-include ':scope'
-include ":app", ":crypto"
+include ':app', ':crypto', ':scope', ':base', ':splash'

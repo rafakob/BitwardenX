@@ -1,6 +1,7 @@
 apply plugin: "com.android.library"
 apply plugin: "kotlin-android"
 apply plugin: "kotlin-android-extensions"
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion(28)
@@ -29,5 +30,9 @@ android {
 }
 
 dependencies {
+    compile project(path: ':scope')
+
     implementation(Deps.kotlin)
+    implementation(Deps.timber)
+    kapt(Deps.daggerCompiler)
 }
