@@ -1,0 +1,8 @@
+apply from: "../module.gradle"
+
+dependencies {
+    implementation project(":base")
+    implementation(Deps.androidAppCompat)
+    implementation(Deps.daggerAndroid)
+    implementation(Deps.daggerAndroidSupport)
+}

@@ -1,6 +1,7 @@
 package com.rafakob.bitwarden
 
 import com.rafakob.bitwarden.scope.ActivityScope
+import com.rafakob.bitwarden.scope.FragmentScope
 import com.rafakob.bitwarden.splash.SplashActivity
 import com.rafakob.bitwarden.splash.SplashModule
 import dagger.Module
@@ -11,9 +12,13 @@ abstract class AppModule {
 
     @ContributesAndroidInjector
     @ActivityScope
-    abstract fun contributesMainActivity(): MainActivity
+    abstract fun contributesMain(): MainActivity
 
     @ContributesAndroidInjector(modules = [SplashModule::class])
     @ActivityScope
-    abstract fun contributesSplashActivity(): SplashActivity
+    abstract fun contributesSplash(): SplashActivity
+
+//    @ContributesAndroidInjector(modules = [LandingModule::class])
+//    @FragmentScope
+//    abstract fun contributesLanding(): LandingFragment
 }
