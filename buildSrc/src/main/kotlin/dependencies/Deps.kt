@@ -14,6 +14,7 @@ object Deps {
     const val androidCoreKtx = "androidx.core:core-ktx:1.0.1"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:1.1.3"
     const val spongyCastle = "com.madgag.spongycastle:core:1.58.0.0"
+    const val hkdfGenerator = "at.favre.lib:hkdf:1.0.2"
     const val dagger = "com.google.dagger:dagger:${Versions.dagger}"
     const val daggerCompiler = "com.google.dagger:dagger-compiler:${Versions.dagger}"
     const val daggerAndroid = "com.google.dagger:dagger-android:${Versions.dagger}"

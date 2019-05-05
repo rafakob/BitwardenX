@@ -45,7 +45,5 @@ class MainActivity : DaggerAppCompatActivity() {
         // Text to decrypt (eg. "reddit.com")
         val textEncrypted = "2.o3lgExOggxaYy22aoxofnA==|l7cYUeR4cD69e31KB9Q8sg==|y7Kf+G7U75I64zsGQKJARqAhs0/ufTmbCg/eizpqJ8I="
         val text = cryptoApi.decrypt(textEncrypted, symmetricDecryptionKey)
-
-        println("Crypto - text: ${String(Base64.decode(text))}")
     }
 }
