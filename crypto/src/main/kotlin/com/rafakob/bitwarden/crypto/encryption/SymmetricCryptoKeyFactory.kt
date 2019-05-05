@@ -1,12 +1,12 @@
 package com.rafakob.bitwarden.crypto.encryption
 
-import com.rafakob.bitwarden.crypto.CryptoKey
+import com.rafakob.bitwarden.crypto.SymmetricCryptoKey
 import com.rafakob.bitwarden.crypto.exceptions.InvalidEncryptionType
 import org.spongycastle.util.encoders.Base64
 
-class DefaultCryptoKeyFactory : CryptoKeyFactory {
+class SymmetricCryptoKeyFactory : CryptoKeyFactory {
 
-    override fun create(rawBytes: ByteArray, encryptionType: EncryptionType?): CryptoKey {
+    override fun create(rawBytes: ByteArray, encryptionType: EncryptionType?): SymmetricCryptoKey {
 
         val encType = encryptionType ?: when (rawBytes.size) {
             32 -> EncryptionType.AesCbc256_B64
@@ -15,7 +15,7 @@ class DefaultCryptoKeyFactory : CryptoKeyFactory {
         }
 
         if (encType == EncryptionType.AesCbc256_B64 && rawBytes.size == 32) {
-            return CryptoKey(
+            return SymmetricCryptoKey(
                 key = rawBytes,
                 encType = encType,
                 encKey = rawBytes,
@@ -25,7 +25,7 @@ class DefaultCryptoKeyFactory : CryptoKeyFactory {
         }
 
         if (encType == EncryptionType.AesCbc128_HmacSha256_B64 && rawBytes.size == 32) {
-            return CryptoKey(
+            return SymmetricCryptoKey(
                 key = rawBytes,
                 encType = encType,
                 encKey = rawBytes.take(16).toByteArray(),
@@ -35,7 +35,7 @@ class DefaultCryptoKeyFactory : CryptoKeyFactory {
         }
 
         if (encType == EncryptionType.AesCbc256_HmacSha256_B64 && rawBytes.size == 64) {
-            return CryptoKey(
+            return SymmetricCryptoKey(
                 key = rawBytes,
                 encType = encType,
                 encKey = rawBytes.take(32).toByteArray(),

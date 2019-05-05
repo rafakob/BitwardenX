@@ -1,6 +1,6 @@
 package com.rafakob.bitwarden.crypto
 
-import com.rafakob.bitwarden.crypto.encryption.DefaultCryptoKeyFactory
+import com.rafakob.bitwarden.crypto.encryption.SymmetricCryptoKeyFactory
 import com.rafakob.bitwarden.crypto.kdf.SpongyCastleKeyDerivation
 import com.rafakob.bitwarden.scope.AppScope
 import dagger.Module
@@ -11,5 +11,5 @@ class CryptoModule {
 
     @Provides
     @AppScope
-    fun providesCryptoApi(): CryptoApi = CryptoService(SpongyCastleKeyDerivation(), DefaultCryptoKeyFactory())
+    fun providesCryptoApi(): CryptoApi = CryptoService(SpongyCastleKeyDerivation(), SymmetricCryptoKeyFactory())
 }
