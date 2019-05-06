@@ -76,9 +76,10 @@ android {
 
 dependencies {
     implementation project(":base")
-    implementation project(":splash")
-    implementation project(":crypto")
-    implementation project(":environment")
+    implementation project(':feature-splash')
+    implementation project(':feature-access')
+    implementation project(':service-crypto')
+    implementation project(':service-environment')
 
     implementation(Deps.kotlin)
     implementation(Deps.androidAppCompat)
@@ -98,6 +99,4 @@ dependencies {
     androidTestImplementation(TestDeps.espressoRules)
 
     androidTestUtil(TestDeps.orchestrator)
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.0.0'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.0.0'
 }

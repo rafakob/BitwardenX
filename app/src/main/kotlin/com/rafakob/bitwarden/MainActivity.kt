@@ -1,22 +1,24 @@
 package com.rafakob.bitwarden
 
 import android.os.Bundle
-import com.rafakob.bitwarden.crypto.CryptoApi
-import com.rafakob.bitwarden.fragments.LandingFragment
-import dagger.android.support.DaggerAppCompatActivity
+import com.rafakob.bitwarden.access.AccessContainer
+import com.rafakob.bitwarden.access.AccessNavigator
+import com.rafakob.bitwarden.base.BaseActivity
 import javax.inject.Inject
 
-class MainActivity : DaggerAppCompatActivity() {
+class MainActivity : BaseActivity(), AccessContainer {
 
     @Inject
-    lateinit var cryptoApi: CryptoApi
+    lateinit var accessNavigator: AccessNavigator
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        supportFragmentManager.beginTransaction()
-//            .replace(R.id.container, LandingFragment.newInstance())
-//            .commit()
+        accessNavigator.showLogin()
     }
+
+    override fun accessFragmentManager() = supportFragmentManager
+
+    override fun accessViewContainer() = R.id.container
 }
