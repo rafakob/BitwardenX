@@ -31,5 +31,9 @@ abstract class AccessModule {
 
     @Binds
     @ActivityScope
+    abstract fun bindsAccessPort(accessAdapter: AccessAdapter): AccessPort
+
+    @Binds
+    @ActivityScope
     abstract fun bindsNavigator(accessNavigatorImpl: AccessNavigatorImpl): AccessNavigator
 }

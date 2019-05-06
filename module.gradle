@@ -30,7 +30,7 @@ android {
 }
 
 dependencies {
-    compile project(path: ":scope")
+    compile project(path: ":base-scope")
 
     implementation(Deps.kotlin)
     implementation(Deps.timber)

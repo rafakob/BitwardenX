@@ -1,15 +1,23 @@
 package com.rafakob.bitwarden.access.navigator
 
 import androidx.fragment.app.Fragment
-import com.rafakob.bitwarden.access.AccessContainer
+import androidx.fragment.app.FragmentManager
 import com.rafakob.bitwarden.access.login.LoginFragment
 import com.rafakob.bitwarden.access.register.RegisterFragment
 import com.rafakob.bitwarden.access.startup.StartupFragment
+import com.rafakob.bitwarden.scope.ActivityScope
 import javax.inject.Inject
 
-class AccessNavigatorImpl @Inject constructor(
-    private val accessContainer: AccessContainer
-) : AccessNavigator {
+@ActivityScope
+class AccessNavigatorImpl @Inject constructor() : AccessNavigator {
+
+    private var fragmentManager: FragmentManager? = null
+    private var containerResId: Int = 0
+
+    override fun init(fragmentManager: FragmentManager, containerResId: Int) {
+        this.fragmentManager = fragmentManager
+        this.containerResId = containerResId
+    }
 
     override fun showStartup() = replace(StartupFragment.newInstance())
 
@@ -18,8 +26,10 @@ class AccessNavigatorImpl @Inject constructor(
     override fun showRegister() = replace(RegisterFragment.newInstance())
 
     private fun replace(fragment: Fragment) {
-        accessContainer.accessFragmentManager().beginTransaction()
-            .replace(accessContainer.accessViewContainer(), fragment)
-            .commit()
+        fragmentManager!!.let {
+            it.beginTransaction()
+                .replace(containerResId, fragment)
+                .commit()
+        }
     }
 }
