@@ -1,4 +1,4 @@
-package com.rafakob.bitwarden.access
+package com.rafakob.bitwarden.access.navigator
 
 interface AccessNavigator {
     fun showStartup()

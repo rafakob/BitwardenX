@@ -1,8 +1,7 @@
-package com.rafakob.bitwarden.access
+package com.rafakob.bitwarden.access.navigator
 
 import androidx.fragment.app.Fragment
 import com.rafakob.bitwarden.access.AccessContainer
-import com.rafakob.bitwarden.access.AccessNavigator
 import com.rafakob.bitwarden.access.login.LoginFragment
 import com.rafakob.bitwarden.access.register.RegisterFragment
 import com.rafakob.bitwarden.access.startup.StartupFragment
