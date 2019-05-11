@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import com.rafakob.bitwarden.access.R
 import com.rafakob.bitwarden.access.navigator.AccessNavigator
 import com.rafakob.bitwarden.base.BaseFragment
-import kotlinx.android.synthetic.main.fragment_startup.*
 import javax.inject.Inject
 
 class StartupFragment : BaseFragment(), StartupContract.View {
@@ -26,7 +25,7 @@ class StartupFragment : BaseFragment(), StartupContract.View {
         inflater.inflate(R.layout.fragment_startup, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        login.setOnClickListener { accessNavigator.showLogin() }
-        register.setOnClickListener { accessNavigator.showRegister() }
+//        login.setOnClickListener { accessNavigator.showLogin() }
+//        register.setOnClickListener { accessNavigator.showRegister() }
     }
 }

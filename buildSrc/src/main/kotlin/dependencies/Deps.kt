@@ -12,6 +12,7 @@ object Deps {
     const val kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
     const val androidAppCompat = "androidx.appcompat:appcompat:1.0.2"
     const val androidCoreKtx = "androidx.core:core-ktx:1.0.1"
+    const val materialComponents = "com.google.android.material:material:1.1.0-alpha06"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:1.1.3"
     const val spongyCastle = "com.madgag.spongycastle:core:1.58.0.0"
     const val dagger = "com.google.dagger:dagger:${Versions.dagger}"

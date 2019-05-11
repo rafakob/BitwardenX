@@ -76,6 +76,7 @@ android {
 
 dependencies {
     implementation project(":base")
+    implementation project(":resources")
     implementation project(':feature-splash')
     implementation project(':feature-access')
     implementation project(':service-crypto')

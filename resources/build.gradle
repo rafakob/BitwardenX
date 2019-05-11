@@ -1,0 +1,6 @@
+apply from: "../module.gradle"
+
+dependencies {
+    implementation(Deps.androidAppCompat)
+    implementation(Deps.materialComponents)
+}
