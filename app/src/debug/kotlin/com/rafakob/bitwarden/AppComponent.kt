@@ -1,5 +1,6 @@
 package com.rafakob.bitwarden
 
+import com.rafakob.bitwarden.startup.StartupBindingModule
 import com.rafakob.bitwarden.crypto.CryptoModule
 import com.rafakob.bitwarden.environment.EnvironmentModule
 import com.rafakob.bitwarden.scope.AppScope
@@ -13,6 +14,7 @@ import dagger.android.support.AndroidSupportInjectionModule
         AndroidSupportInjectionModule::class,
         AppModule::class,
         CryptoModule::class,
+        StartupBindingModule::class,
         EnvironmentModule::class
     ]
 )

@@ -21,4 +21,5 @@ object Deps {
     const val daggerAndroidSupport = "com.google.dagger:dagger-android-support:${Versions.dagger}"
     const val daggerAndroidProcessor = "com.google.dagger:dagger-android-processor:${Versions.dagger}"
     const val timber = "com.github.ajalt:timberkt:1.5.1"
+    const val ankoCommons = "org.jetbrains.anko:anko-commons:0.10.8"
 }

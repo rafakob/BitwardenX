@@ -1,6 +1,5 @@
 package com.rafakob.bitwarden
 
-import com.rafakob.bitwarden.access.AccessModule
 import com.rafakob.bitwarden.main.MainActivity
 import com.rafakob.bitwarden.main.MainModule
 import com.rafakob.bitwarden.scope.ActivityScope
@@ -12,7 +11,7 @@ import dagger.android.ContributesAndroidInjector
 @Module
 abstract class AppModule {
 
-    @ContributesAndroidInjector(modules = [MainModule::class, AccessModule::class])
+    @ContributesAndroidInjector(modules = [MainModule::class])
     @ActivityScope
     abstract fun contributesMain(): MainActivity
 
