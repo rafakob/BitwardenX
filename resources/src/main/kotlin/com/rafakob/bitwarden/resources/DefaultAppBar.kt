@@ -3,6 +3,7 @@ package com.rafakob.bitwarden.resources
 import android.app.Activity
 import android.content.Context
 import android.util.AttributeSet
+import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import com.google.android.material.appbar.AppBarLayout
 import com.rafakob.bitwarden.resources.extensions.readString
@@ -23,8 +24,8 @@ class DefaultAppBar : AppBarLayout {
         toolbar.title = context.readString(res, text)
     }
 
-    fun setToolbarBackButton(activity: Activity?, click: (() -> Unit)? = null) {
-        toolbar.setNavigationIcon(R.drawable.ic_back)
+    fun setToolbarButton(activity: Activity?, @DrawableRes icon: Int? = null, click: (() -> Unit)? = null) {
+        toolbar.setNavigationIcon(icon ?: R.drawable.ic_back)
         toolbar.setNavigationOnClickListener { click?.invoke() ?: activity?.onBackPressed() }
     }
 }

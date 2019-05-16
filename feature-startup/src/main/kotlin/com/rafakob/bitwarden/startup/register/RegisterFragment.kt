@@ -23,7 +23,7 @@ internal class RegisterFragment : BaseFragment(), RegisterContract.View {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         appBar.setToolbarTitle(R.string.register_toolbar_title)
-        appBar.setToolbarBackButton(activity)
+        appBar.setToolbarButton(activity, R.drawable.ic_close)
         presenter.onViewAttached()
     }
 

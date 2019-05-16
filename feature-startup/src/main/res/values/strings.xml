@@ -11,4 +11,10 @@
     <string name="register_toolbar_title">Create account</string>
     <string name="register_email">Email</string>
     <string name="register_password">Password</string>
+    <string name="register_password_confirm">Confirm password</string>
+    <string name="register_password_hint">Password hint (optional)</string>
+    <string name="register_password_description">This is your master password. Do not forget it!\nThere is now way to recover it!</string>
+    <string name="register_password_hint_description">Password hint can help you remember your password.</string>
+    <string name="register_submit">Submit</string>
+
 </resources>
