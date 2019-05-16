@@ -17,16 +17,4 @@ abstract class StartupBindingModule {
     @ContributesAndroidInjector(modules = [StartupModule::class])
     @ActivityScope
     abstract fun contributesStartup(): StartupActivity
-
-    @ContributesAndroidInjector(modules = [LoginModule::class])
-    @FragmentScope
-    internal abstract fun contributesLogin(): LoginFragment
-
-    @ContributesAndroidInjector(modules = [RegisterModule::class])
-    @FragmentScope
-    internal abstract fun contributesRegister(): RegisterFragment
-
-    @ContributesAndroidInjector(modules = [ResetPasswordModule::class])
-    @FragmentScope
-    internal abstract fun contributesResetPassword(): ResetPasswordFragment
 }
