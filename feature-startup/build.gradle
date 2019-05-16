@@ -7,4 +7,6 @@ dependencies {
     implementation(Deps.materialComponents)
     implementation(Deps.daggerAndroid)
     implementation(Deps.daggerAndroidSupport)
+    implementation(Deps.materialDialogs)
+    implementation(Deps.materialDialogsBottomsheets)
 }

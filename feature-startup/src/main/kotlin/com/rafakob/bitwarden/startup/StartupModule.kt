@@ -9,8 +9,8 @@ import com.rafakob.bitwarden.startup.navigator.AndroidStartupNavigator
 import com.rafakob.bitwarden.startup.navigator.StartupNavigator
 import com.rafakob.bitwarden.startup.register.RegisterFragment
 import com.rafakob.bitwarden.startup.register.RegisterModule
-import com.rafakob.bitwarden.startup.resetpassword.ResetPasswordFragment
-import com.rafakob.bitwarden.startup.resetpassword.ResetPasswordModule
+import com.rafakob.bitwarden.startup.passwordhint.PasswordHintFragment
+import com.rafakob.bitwarden.startup.passwordhint.PasswordHintModule
 import dagger.Binds
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -26,9 +26,9 @@ internal abstract class StartupModule {
     @FragmentScope
     abstract fun contributesRegister(): RegisterFragment
 
-    @ContributesAndroidInjector(modules = [ResetPasswordModule::class])
+    @ContributesAndroidInjector(modules = [PasswordHintModule::class])
     @FragmentScope
-    abstract fun contributesResetPassword(): ResetPasswordFragment
+    abstract fun contributesResetPassword(): PasswordHintFragment
 
     @Binds
     @ActivityScope

@@ -22,4 +22,7 @@ object Deps {
     const val daggerAndroidProcessor = "com.google.dagger:dagger-android-processor:${Versions.dagger}"
     const val timber = "com.github.ajalt:timberkt:1.5.1"
     const val ankoCommons = "org.jetbrains.anko:anko-commons:0.10.8"
+    const val materialDialogs = "com.afollestad.material-dialogs:core:3.0.0-alpha2"
+    const val materialDialogsInput = "com.afollestad.material-dialogs:input:3.0.0-alpha2"
+    const val materialDialogsBottomsheets = "com.afollestad.material-dialogs:bottomsheets:3.0.0-alpha2"
 }

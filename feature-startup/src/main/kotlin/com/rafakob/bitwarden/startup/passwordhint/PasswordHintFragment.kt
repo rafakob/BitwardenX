@@ -1,4 +1,4 @@
-package com.rafakob.bitwarden.startup.resetpassword
+package com.rafakob.bitwarden.startup.passwordhint
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,13 +8,13 @@ import com.rafakob.bitwarden.base.BaseFragment
 import com.rafakob.bitwarden.startup.R
 import javax.inject.Inject
 
-internal class ResetPasswordFragment : BaseFragment(), ResetPasswordContract.View {
+internal class PasswordHintFragment : BaseFragment(), PasswordHintContract.View {
 
     @Inject
-    lateinit var presenter: ResetPasswordContract.Presenter
+    lateinit var presenter: PasswordHintContract.Presenter
 
     companion object {
-        fun newInstance() = ResetPasswordFragment()
+        fun newInstance() = PasswordHintFragment()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?) =

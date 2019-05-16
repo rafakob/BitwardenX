@@ -1,8 +1,8 @@
-package com.rafakob.bitwarden.startup.resetpassword
+package com.rafakob.bitwarden.startup.passwordhint
 
 import com.rafakob.bitwarden.base.BasePresenter
 
-internal interface ResetPasswordContract {
+internal interface PasswordHintContract {
     interface View
 
     interface Presenter : BasePresenter

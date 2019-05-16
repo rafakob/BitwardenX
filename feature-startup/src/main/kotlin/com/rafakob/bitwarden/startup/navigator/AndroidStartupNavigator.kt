@@ -5,7 +5,7 @@ import androidx.fragment.app.FragmentTransaction
 import com.rafakob.bitwarden.base.BaseActivity
 import com.rafakob.bitwarden.startup.R
 import com.rafakob.bitwarden.startup.login.LoginFragment
-import com.rafakob.bitwarden.startup.resetpassword.ResetPasswordFragment
+import com.rafakob.bitwarden.startup.passwordhint.PasswordHintFragment
 import com.rafakob.bitwarden.startup.register.RegisterFragment
 import javax.inject.Inject
 
@@ -22,7 +22,7 @@ internal class AndroidStartupNavigator @Inject constructor(
     }
 
     override fun showResetPassword() {
-        replace(ResetPasswordFragment.newInstance())
+        replace(PasswordHintFragment.newInstance())
     }
 
     private fun replace(fragment: Fragment) {

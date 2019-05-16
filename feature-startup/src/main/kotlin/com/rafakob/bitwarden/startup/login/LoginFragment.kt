@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.afollestad.materialdialogs.MaterialDialog
+import com.afollestad.materialdialogs.bottomsheets.BottomSheet
 import com.rafakob.bitwarden.base.BaseFragment
 import com.rafakob.bitwarden.startup.R
 import com.rafakob.bitwarden.startup.navigator.StartupNavigator
@@ -28,7 +30,12 @@ internal class LoginFragment : BaseFragment(), LoginContract.View {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         presenter.onViewAttached()
         register.setOnClickListener { navigator.showRegister() }
-        resetPassword.setOnClickListener { navigator.showResetPassword() }
+        resetPassword.setOnClickListener {
+            MaterialDialog(context!!, BottomSheet())
+
+                .show {
+                }
+        }
     }
 
     override fun onDestroyView() {
