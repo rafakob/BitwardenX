@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="login_header" translatable="false">bitwardenX</string>
+    <string name="login_email">Email</string>
+    <string name="login_password">Password</string>
+    <string name="login_submit">Login</string>
+    <string name="login_register">Create account</string>
+    <string name="login_reset_password">Password hint</string>
+
+    <string name="register_toolbar_title">Create account</string>
+    <string name="register_email">Email</string>
+    <string name="register_password">Password</string>
+</resources>

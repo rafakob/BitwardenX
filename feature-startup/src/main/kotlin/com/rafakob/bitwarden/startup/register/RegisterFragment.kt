@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.rafakob.bitwarden.base.BaseFragment
 import com.rafakob.bitwarden.startup.R
+import kotlinx.android.synthetic.main.fragment_register.*
 import javax.inject.Inject
 
 internal class RegisterFragment : BaseFragment(), RegisterContract.View {
@@ -21,6 +22,8 @@ internal class RegisterFragment : BaseFragment(), RegisterContract.View {
         inflater.inflate(R.layout.fragment_register, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        appBar.setToolbarTitle(R.string.register_toolbar_title)
+        appBar.setToolbarBackButton(activity)
         presenter.onViewAttached()
     }
 

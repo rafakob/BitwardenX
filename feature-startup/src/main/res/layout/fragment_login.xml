@@ -7,62 +7,78 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_bitwarden" />
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/logo_bitwarden" />
 
     <TextView
         style="@style/TextAppearance.AppCompat.Large"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:text="BitwardenX" />
+        android:text="@string/login_header" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        app:startIconDrawable="@drawable/ic_email"
-        android:layout_height="wrap_content"
-        android:hint="Email">
+        android:layout_height="wrap_content">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/TextInput.Outlined"
-        app:startIconDrawable="@drawable/ic_password"
-        android:layout_width="match_parent"
-
-        android:layout_height="wrap_content"
-        android:hint="Password"
-        app:endIconMode="password_toggle">
-
-        <com.google.android.material.textfield.TextInputEditText
+        <LinearLayout
+            android:padding="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword" />
+            android:orientation="vertical">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInput.Outlined"
+                android:layout_width="match_parent"
+                app:startIconDrawable="@drawable/ic_email"
+                android:layout_height="wrap_content"
+                android:hint="@string/login_email">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/material_button"
-        style="@style/RoundedButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="56dp"
-        android:text="Login"/>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInput.Outlined"
+                app:startIconDrawable="@drawable/ic_password"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:hint="@string/login_password"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/material_button"
+                style="@style/Button"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:text="@string/login_submit" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.button.MaterialButton
         style="@style/Button.Text"
         android:id="@+id/register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Create Account"
+        android:text="@string/login_register"
         app:cornerRadius="24dp" />
 
     <com.google.android.material.button.MaterialButton
@@ -70,6 +86,7 @@
         android:id="@+id/resetPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Reset password"
+        android:text="@string/login_reset_password"
         app:cornerRadius="24dp" />
+
 </LinearLayout>

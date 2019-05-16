@@ -1,6 +1,7 @@
 package com.rafakob.bitwarden.startup.navigator
 
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.rafakob.bitwarden.base.BaseActivity
 import com.rafakob.bitwarden.startup.R
 import com.rafakob.bitwarden.startup.login.LoginFragment
@@ -27,6 +28,8 @@ internal class AndroidStartupNavigator @Inject constructor(
     private fun replace(fragment: Fragment) {
         activity.supportFragmentManager.beginTransaction()
             .replace(R.id.container, fragment)
+            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+            .addToBackStack(null)
             .commit()
     }
 }
