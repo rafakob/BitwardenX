@@ -3,5 +3,6 @@
 
     <color name="transparent">@android:color/transparent</color>
     <color name="primary">#039be5</color>
+    <color name="iconTint">#696969</color>
 
 </resources>

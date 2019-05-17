@@ -4,10 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.rafakob.bitwarden.base.BaseBottomSheetFragment
-import com.rafakob.bitwarden.base.BaseFragment
 import com.rafakob.bitwarden.startup.R
+import kotlinx.android.synthetic.main.fragment_password_hint.*
 import javax.inject.Inject
 
 internal class PasswordHintFragment : BaseBottomSheetFragment(), PasswordHintContract.View {
@@ -16,7 +15,12 @@ internal class PasswordHintFragment : BaseBottomSheetFragment(), PasswordHintCon
     lateinit var presenter: PasswordHintContract.Presenter
 
     companion object {
-        fun newInstance() = PasswordHintFragment()
+        private const val EXTRA_EMAIL = "email"
+
+        val TAG: String = PasswordHintFragment::class.java.simpleName
+        fun newInstance(email: String) = PasswordHintFragment().apply {
+            arguments = Bundle().apply { putString(EXTRA_EMAIL, email) }
+        }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?) =
@@ -24,10 +28,14 @@ internal class PasswordHintFragment : BaseBottomSheetFragment(), PasswordHintCon
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         presenter.onViewAttached()
+        email.setText(arguments?.getString(EXTRA_EMAIL))
+        send.setOnClickListener { dismiss() }
     }
 
     override fun onDestroyView() {
         presenter.onViewDetached()
         super.onDestroyView()
     }
+
+
 }

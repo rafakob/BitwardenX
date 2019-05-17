@@ -17,4 +17,8 @@
     <string name="register_password_hint_description">Password hint can help you remember your password.</string>
     <string name="register_submit">Submit</string>
 
+    <string name="password_hint_title">Send password hint to your email address</string>
+    <string name="password_hint_input">Email</string>
+    <string name="password_hint_send">Send</string>
+
 </resources>

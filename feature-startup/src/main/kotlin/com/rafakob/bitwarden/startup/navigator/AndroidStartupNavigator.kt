@@ -21,8 +21,9 @@ internal class AndroidStartupNavigator @Inject constructor(
         replace(RegisterFragment.newInstance())
     }
 
-    override fun showResetPassword() {
-        replace(PasswordHintFragment.newInstance())
+    override fun showPasswordHint(email: String) {
+        PasswordHintFragment.newInstance(email)
+            .show(activity.supportFragmentManager, PasswordHintFragment.TAG)
     }
 
     private fun replace(fragment: Fragment) {
