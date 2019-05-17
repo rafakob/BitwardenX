@@ -4,11 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.FrameLayout
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.bottomsheets.BottomSheet
+import com.afollestad.materialdialogs.customview.customView
 import com.rafakob.bitwarden.base.BaseFragment
 import com.rafakob.bitwarden.startup.R
 import com.rafakob.bitwarden.startup.navigator.StartupNavigator
+import com.rafakob.bitwarden.startup.passwordhint.PasswordHintFragment
 import kotlinx.android.synthetic.main.fragment_login.*
 import javax.inject.Inject
 
@@ -31,10 +34,12 @@ internal class LoginFragment : BaseFragment(), LoginContract.View {
         presenter.onViewAttached()
         register.setOnClickListener { navigator.showRegister() }
         resetPassword.setOnClickListener {
-            MaterialDialog(context!!, BottomSheet())
+//            MaterialDialog(context!!, BottomSheet())
+//                .customView(R.layout.fragment_password_hint)
+//                .show {
+//                }
 
-                .show {
-                }
+            PasswordHintFragment.newInstance().show(fragmentManager!!,"sad")
         }
     }
 

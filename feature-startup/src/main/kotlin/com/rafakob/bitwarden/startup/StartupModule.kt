@@ -28,7 +28,7 @@ internal abstract class StartupModule {
 
     @ContributesAndroidInjector(modules = [PasswordHintModule::class])
     @FragmentScope
-    abstract fun contributesResetPassword(): PasswordHintFragment
+    abstract fun contributesPasswordHint(): PasswordHintFragment
 
     @Binds
     @ActivityScope

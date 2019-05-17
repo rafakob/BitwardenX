@@ -85,6 +85,7 @@ dependencies {
     implementation(Deps.kotlin)
     implementation(Deps.androidAppCompat)
     implementation(Deps.androidCoreKtx)
+    implementation(Deps.materialComponents)
     implementation(Deps.constraintLayout)
     implementation(Deps.daggerAndroid)
     implementation(Deps.daggerAndroidSupport)
