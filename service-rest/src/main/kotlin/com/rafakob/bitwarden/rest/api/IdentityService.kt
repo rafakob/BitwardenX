@@ -11,4 +11,8 @@ class IdentityService @Inject constructor(
 ) : IdentityApi {
 
     private val api: IdentityRetrofitApi by lazy { retrofit.create(IdentityRetrofitApi::class.java) }
+
+    override fun login(email: String, password: String) =
+        api.login(urlProvider.getIdentityUrl(), username = email, password = password)
+            .ignoreElement()
 }
