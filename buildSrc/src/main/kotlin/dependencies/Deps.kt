@@ -3,6 +3,7 @@ object Deps {
     object Versions {
         const val kotlin = "1.3.31"
         const val dagger = "2.22.1"
+        const val retrofit = "2.5.0"
     }
 
     const val pluginAndroid = "com.android.tools.build:gradle:3.4.0"
@@ -25,4 +26,7 @@ object Deps {
     const val materialDialogs = "com.afollestad.material-dialogs:core:3.0.0-alpha2"
     const val materialDialogsInput = "com.afollestad.material-dialogs:input:3.0.0-alpha2"
     const val materialDialogsBottomsheets = "com.afollestad.material-dialogs:bottomsheets:3.0.0-alpha2"
+    const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+    const val retrofitRx = "com.squareup.retrofit2:adapter-rxjava2:${Versions.retrofit}"
+    const val retrofitGson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
 }
