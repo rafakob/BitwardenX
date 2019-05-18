@@ -34,6 +34,9 @@ dependencies {
 
     implementation(Deps.kotlin)
     implementation(Deps.timber)
+    implementation(Deps.rxJava)
+    implementation(Deps.rxAndroid)
+    implementation(Deps.rxKotlin)
     kapt(Deps.daggerCompiler)
     kapt(Deps.daggerAndroidProcessor)
 }

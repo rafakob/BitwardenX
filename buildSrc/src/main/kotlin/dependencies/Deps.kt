@@ -31,4 +31,7 @@ object Deps {
     const val retrofitRx = "com.squareup.retrofit2:adapter-rxjava2:${Versions.retrofit}"
     const val retrofitGson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
     const val okhttpHttpLogging = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"
+    const val rxJava = "io.reactivex.rxjava2:rxjava:2.2.8"
+    const val rxAndroid = "io.reactivex.rxjava2:rxandroid:2.1.1"
+    const val rxKotlin = "io.reactivex.rxjava2:rxkotlin:2.3.0"
 }
