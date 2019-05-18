@@ -4,12 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.DialogFragment
 import com.rafakob.bitwarden.base.BaseBottomSheetFragment
+import com.rafakob.bitwarden.base.BaseDialogFragment
 import com.rafakob.bitwarden.startup.R
 import kotlinx.android.synthetic.main.fragment_password_hint.*
 import javax.inject.Inject
 
-internal class PasswordHintFragment : BaseBottomSheetFragment(), PasswordHintContract.View {
+internal class PasswordHintFragment : BaseDialogFragment(), PasswordHintContract.View {
 
     @Inject
     lateinit var presenter: PasswordHintContract.Presenter
