@@ -4,6 +4,7 @@ object Deps {
         const val kotlin = "1.3.31"
         const val dagger = "2.22.1"
         const val retrofit = "2.5.0"
+        const val okhttp = "3.14.1"
     }
 
     const val pluginAndroid = "com.android.tools.build:gradle:3.4.0"
@@ -29,4 +30,5 @@ object Deps {
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val retrofitRx = "com.squareup.retrofit2:adapter-rxjava2:${Versions.retrofit}"
     const val retrofitGson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
+    const val okhttpHttpLogging = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"
 }

@@ -81,6 +81,7 @@ dependencies {
     implementation project(':feature-startup')
     implementation project(':service-crypto')
     implementation project(':service-environment')
+    implementation project(':service-rest')
 
     implementation(Deps.kotlin)
     implementation(Deps.androidAppCompat)
@@ -90,6 +91,10 @@ dependencies {
     implementation(Deps.daggerAndroid)
     implementation(Deps.daggerAndroidSupport)
     implementation(Deps.timber)
+    implementation(Deps.retrofit)
+    implementation(Deps.retrofitRx)
+    implementation(Deps.retrofitGson)
+    implementation(Deps.okhttpHttpLogging)
 
     kapt(Deps.daggerCompiler)
     kapt(Deps.daggerAndroidProcessor)

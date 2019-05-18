@@ -1,7 +1,9 @@
 apply from: "../module.gradle"
 
 dependencies {
+    implementation project(':service-environment')
     implementation(Deps.retrofit)
     implementation(Deps.retrofitRx)
     implementation(Deps.retrofitGson)
+    implementation(Deps.okhttpHttpLogging)
 }
