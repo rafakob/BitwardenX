@@ -1,7 +1,10 @@
 apply from: "../module.gradle"
 
 dependencies {
+    api(Deps.ankoCommons)
+
     implementation(Deps.androidAppCompat)
     implementation(Deps.daggerAndroid)
     implementation(Deps.daggerAndroidSupport)
+    implementation(Deps.materialComponents)
 }
