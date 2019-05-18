@@ -1,9 +1,8 @@
 package com.rafakob.bitwarden.rest
 
 import com.rafakob.bitwarden.environment.EnvironmentApi
-import com.rafakob.bitwarden.rest.retrofit.BitwardenApi
-import com.rafakob.bitwarden.rest.retrofit.IdentityApi
-import com.rafakob.bitwarden.rest.retrofit.VaultApi
+import com.rafakob.bitwarden.rest.retrofit.BitwardenRetrofitApi
+import com.rafakob.bitwarden.rest.retrofit.IdentityRetrofitApi
 import com.rafakob.bitwarden.rest.url.DefaultUrlProvider
 import com.rafakob.bitwarden.rest.url.UrlProvider
 import com.rafakob.bitwarden.scope.AppScope
@@ -54,16 +53,4 @@ class NetworkModule {
     @Provides
     @AppScope
     fun providesUrlProvider(): UrlProvider = DefaultUrlProvider()
-
-    @Provides
-    @AppScope
-    fun providesBitwardenApi(retrofit: Retrofit): BitwardenApi = retrofit.create(BitwardenApi::class.java)
-
-    @Provides
-    @AppScope
-    fun providesIdentityApi(retrofit: Retrofit): IdentityApi = retrofit.create(IdentityApi::class.java)
-
-    @Provides
-    @AppScope
-    fun providesVaultApi(retrofit: Retrofit): VaultApi = retrofit.create(VaultApi::class.java)
 }

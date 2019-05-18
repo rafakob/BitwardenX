@@ -1,7 +1,7 @@
-package com.rafakob.bitwarden.rest
+package com.rafakob.bitwarden.rest.api
 
 import io.reactivex.Completable
 
-interface RestApi {
+interface VaultApi {
     fun passwordHint(email: String): Completable
 }

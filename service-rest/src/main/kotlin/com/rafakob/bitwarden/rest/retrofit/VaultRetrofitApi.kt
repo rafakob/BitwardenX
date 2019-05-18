@@ -6,7 +6,7 @@ import retrofit2.http.Body
 import retrofit2.http.POST
 import retrofit2.http.Path
 
-interface VaultApi {
+internal interface VaultRetrofitApi {
 
     @POST("{endpoint}/api/accounts/password-hint")
     fun passwordHint(
