@@ -1,8 +1,8 @@
 object TestDeps {
 
     object Versions {
-        const val espresso = "3.1.1"
-        const val espressoRunner = "1.1.1"
+        const val espresso = "3.2.0"
+        const val espressoRunner = "1.2.0"
     }
 
     const val junit = "junit:junit:4.12"
