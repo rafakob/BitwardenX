@@ -1,5 +1,0 @@
-apply from: "../kotlinModule.gradle"
-
-dependencies {
-    api Deps.dagger
-}

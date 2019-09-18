@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+
+        <!--        <item name="colorPrimary">#212121</item>-->
+        <!--        <item name="colorPrimaryVariant">#000000</item>-->
+        <!--        <item name="colorOnPrimary">#FFFFFF</item>-->
+        <!--        <item name="colorSecondary">#2962FF</item>-->
+        <!--        <item name="colorSecondaryVariant">#0039CB</item>-->
+        <!--        <item name="colorOnSecondary">#FFFFFF</item>-->
+        <!--        <item name="colorError">#F44336</item>-->
+        <!--        <item name="colorOnError">#FFFFFF</item>-->
+        <!--        <item name="colorSurface">#FFFFFF</item>-->
+        <!--        <item name="colorOnSurface">#212121</item>-->
+        <!--        <item name="colorOnBackground">#212121</item>-->
+    </style>
+
+    <style name="AppTheme.Transparent">
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
+    <style name="Button" parent="Widget.MaterialComponents.Button" />
+
+    <style name="Button.Unelevated" parent="Widget.MaterialComponents.Button.UnelevatedButton" />
+
+    <style name="Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton" />
+
+    <style name="Button.Text" parent="Widget.MaterialComponents.Button.TextButton" />
+
+    <style name="RoundedButton" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">24dp</item>
+    </style>
+
+    <style name="TextInput" parent="Widget.MaterialComponents.TextInputLayout.FilledBox" />
+
+    <style name="TextInput.Outlined" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox" />
+</resources>

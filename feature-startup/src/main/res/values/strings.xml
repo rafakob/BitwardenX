@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="login_header" translatable="false">bitwardenX</string>
+    <string name="login_email">Email</string>
+    <string name="login_password">Password</string>
+    <string name="login_submit">Login</string>
+    <string name="login_register">Create account</string>
+    <string name="login_reset_password">Password hint</string>
+
+    <string name="register_toolbar_title">Create account</string>
+    <string name="register_email">Email</string>
+    <string name="register_password">Password</string>
+    <string name="register_password_confirm">Confirm password</string>
+    <string name="register_password_hint">Password hint (optional)</string>
+    <string name="register_password_description">This is your master password. Do not forget it!\nThere is now way to recover it!</string>
+    <string name="register_password_hint_description">Password hint can help you remember your password.</string>
+    <string name="register_submit">Submit</string>
+
+    <string name="password_hint_title">Send password hint to your email address</string>
+    <string name="password_hint_input">Email</string>
+    <string name="password_hint_send">Send</string>
+
+</resources>

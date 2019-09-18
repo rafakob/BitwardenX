@@ -1,0 +1,13 @@
+apply from: "../module.gradle"
+
+dependencies {
+    implementation project(":base")
+    implementation project(":resources")
+    implementation project(':service-rest')
+    implementation(Deps.androidAppCompat)
+    implementation(Deps.materialComponents)
+    implementation(Deps.daggerAndroid)
+    implementation(Deps.daggerAndroidSupport)
+    implementation(Deps.materialDialogs)
+    implementation(Deps.materialDialogsBottomsheets)
+}

@@ -1,7 +1,7 @@
 apply plugin: "com.android.application"
 apply plugin: "kotlin-android"
 apply plugin: "kotlin-android-extensions"
-apply plugin: 'kotlin-kapt'
+apply plugin: "kotlin-kapt"
 
 android {
     compileSdkVersion(28)
@@ -75,23 +75,35 @@ android {
 }
 
 dependencies {
-    implementation project(":crypto")
+    implementation project(":base")
+    implementation project(":resources")
+    implementation project(':feature-splash')
+    implementation project(':feature-startup')
+    implementation project(':service-crypto')
+    implementation project(':service-environment')
+    implementation project(':service-rest')
 
     implementation(Deps.kotlin)
     implementation(Deps.androidAppCompat)
     implementation(Deps.androidCoreKtx)
+    implementation(Deps.materialComponents)
     implementation(Deps.constraintLayout)
-    implementation Deps.daggerAndroid
-    implementation Deps.daggerAndroidSupport
+    implementation(Deps.daggerAndroid)
+    implementation(Deps.daggerAndroidSupport)
+    implementation(Deps.timber)
+    implementation(Deps.retrofit)
+    implementation(Deps.retrofitRx)
+    implementation(Deps.retrofitGson)
+    implementation(Deps.okhttpHttpLogging)
 
-    kapt Deps.daggerCompiler
-    kapt Deps.daggerAndroidProcessor
+    kapt(Deps.daggerCompiler)
+    kapt(Deps.daggerAndroidProcessor)
 
     testImplementation(TestDeps.junit)
 
     androidTestImplementation(TestDeps.espressoRunner)
     androidTestImplementation(TestDeps.espressoCore)
-    androidTestImplementation TestDeps.espressoRules
+    androidTestImplementation(TestDeps.espressoRules)
 
-    androidTestUtil TestDeps.orchestrator
+    androidTestUtil(TestDeps.orchestrator)
 }

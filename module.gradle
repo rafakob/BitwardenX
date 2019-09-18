@@ -1,6 +1,7 @@
 apply plugin: "com.android.library"
 apply plugin: "kotlin-android"
 apply plugin: "kotlin-android-extensions"
+apply plugin: "kotlin-kapt"
 
 android {
     compileSdkVersion(28)
@@ -23,11 +24,19 @@ android {
     }
 
     sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
-        test.java.srcDirs += 'src/test/kotlin'
+        main.java.srcDirs += "src/main/kotlin"
+        test.java.srcDirs += "src/test/kotlin"
     }
 }
 
 dependencies {
+    compile project(path: ":base-scope")
+
     implementation(Deps.kotlin)
+    implementation(Deps.timber)
+    implementation(Deps.rxJava)
+    implementation(Deps.rxAndroid)
+    implementation(Deps.rxKotlin)
+    kapt(Deps.daggerCompiler)
+    kapt(Deps.daggerAndroidProcessor)
 }
