@@ -5,7 +5,7 @@ import javax.inject.Inject
 
 class SplashPresenter @Inject constructor(
     private val view: SplashContract.View
-) : SplashContract.Presenter {
+) : SplashContract.Presenter() {
 
     override fun onViewAttached() {
         view.showSomething()

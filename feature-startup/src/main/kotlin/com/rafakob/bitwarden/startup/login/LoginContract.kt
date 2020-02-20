@@ -2,8 +2,14 @@ package com.rafakob.bitwarden.startup.login
 
 import com.rafakob.bitwarden.base.BasePresenter
 
-internal interface LoginContract {
-    interface View
+interface LoginContract {
+    interface View {
+        fun startMain()
+    }
 
-    interface Presenter : BasePresenter
+    abstract class Presenter : BasePresenter() {
+        abstract fun onLoginClick(emailString: String, passwordString: String)
+        abstract fun onRegisterClick()
+        abstract fun onPasswordHintClick(emailString: String)
+    }
 }

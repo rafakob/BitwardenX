@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="connection_error">BitwardenX</string>
+    <string name="unknown_error">BitwardenX</string>
+</resources>

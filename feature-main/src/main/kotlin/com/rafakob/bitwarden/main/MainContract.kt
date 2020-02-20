@@ -3,7 +3,9 @@ package com.rafakob.bitwarden.main
 import com.rafakob.bitwarden.base.BasePresenter
 
 interface MainContract {
-    interface View
+    interface View {
+        fun showSomething()
+    }
 
-    interface Presenter : BasePresenter
+    abstract class Presenter : BasePresenter()
 }

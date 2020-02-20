@@ -5,5 +5,5 @@ import com.rafakob.bitwarden.base.BasePresenter
 internal interface RegisterContract {
     interface View
 
-    interface Presenter : BasePresenter
+    abstract class Presenter : BasePresenter()
 }

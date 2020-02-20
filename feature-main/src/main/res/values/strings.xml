@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="login_header" translatable="false">bitwardenX</string>
+    <string name="login_email">Email</string>
+    <string name="login_password">Password</string>
+    <string name="login_submit">Login</string>
+    <string name="login_register">Create account</string>
+    <string name="login_reset_password">Password hint</string>
+    <string name="login_error_email_format">Invalid email format</string>
+    <string name="login_error_password_format">Invalid password format</string>
+    <string name="login_error_invalid_credentials">Email or password is incorrect. Try again.</string>
+
+    <string name="register_toolbar_title">Create account</string>
+    <string name="register_email">Email</string>
+    <string name="register_password">Password</string>
+    <string name="register_password_confirm">Confirm password</string>
+    <string name="register_password_hint">Password hint (optional)</string>
+    <string name="register_password_description">This is your master password. Do not forget it!\nThere is now way to recover it!</string>
+    <string name="register_password_hint_description">Password hint can help you remember your password.</string>
+    <string name="register_submit">Submit</string>
+
+    <string name="passwordhint_title">Password Hint</string>
+    <string name="passwordhint_description">Send password hint to your email address</string>
+    <string name="passwordhint_input">Email</string>
+    <string name="passwordhint_send">Send</string>
+    <string name="passwordhint_email_error">Invalid email format</string>
+
+</resources>

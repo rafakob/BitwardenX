@@ -27,6 +27,10 @@ android {
         main.java.srcDirs += "src/main/kotlin"
         test.java.srcDirs += "src/test/kotlin"
     }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
 }
 
 dependencies {
@@ -37,6 +41,12 @@ dependencies {
     implementation(Deps.rxJava)
     implementation(Deps.rxAndroid)
     implementation(Deps.rxKotlin)
+    implementation(Deps.extensions)
     kapt(Deps.daggerCompiler)
     kapt(Deps.daggerAndroidProcessor)
+
+    testImplementation(TestDeps.junit)
+    testImplementation(TestDeps.mockk)
+    testImplementation(TestDeps.elmyr)
+
 }
