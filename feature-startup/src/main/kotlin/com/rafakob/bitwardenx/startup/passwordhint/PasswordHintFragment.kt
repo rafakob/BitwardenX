@@ -41,9 +41,11 @@ internal class PasswordHintFragment : BaseBottomSheetFragment(), PasswordHintCon
         super.onDestroyView()
     }
 
-    override fun emailChanged(): Flowable<String> = email.textChanges().map { it.toString() }.toFlowable(BackpressureStrategy.LATEST)
+    override fun emailChanged(): Flowable<String> =
+            email.textChanges().map { it.toString() }.toFlowable(BackpressureStrategy.LATEST)
 
-    override fun sendClicked(): Flowable<Unit> = send.clicks().toFlowable(BackpressureStrategy.LATEST)
+    override fun sendClicked(): Flowable<Unit> =
+            send.clicks().toFlowable(BackpressureStrategy.LATEST)
 
     override fun setSendEnabled(enabled: Boolean) {
         send.isEnabled = enabled
@@ -58,7 +60,7 @@ internal class PasswordHintFragment : BaseBottomSheetFragment(), PasswordHintCon
     }
 
     override fun showSuccessPopup(msgRes: Int) {
-        Toast.makeText(context!!, getString(msgRes), Toast.LENGTH_LONG).show()
+        Toast.makeText(requireContext(), getString(msgRes), Toast.LENGTH_LONG).show()
     }
 
     override fun close() = dismiss()

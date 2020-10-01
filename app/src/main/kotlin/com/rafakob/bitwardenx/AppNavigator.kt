@@ -11,11 +11,12 @@ import javax.inject.Inject
 class AppNavigator @Inject constructor() : Navigator {
 
     override fun startSplash(context: Context) =
-        context.start<SplashActivity>()
+            context.start<SplashActivity>()
 
     override fun startLogin(context: Context) =
-        context.start<StartupActivity>()
+            context.start<StartupActivity>()
 
     override fun startMain(context: Context) =
-        context.start<MainActivity>()
+            context.start<MainActivity>()
+
 }
