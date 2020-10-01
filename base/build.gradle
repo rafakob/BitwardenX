@@ -1,7 +1,7 @@
 apply from: "../module.gradle"
 
 dependencies {
-    api(Deps.ankoCommons)
+    api(Deps.splitties)
 
     implementation(Deps.androidAppCompat)
     implementation(Deps.daggerAndroid)

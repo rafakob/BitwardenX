@@ -25,6 +25,14 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'META-INF/resources_debug.kotlin_module'
+    }
+
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
         debug.java.srcDirs += 'src/debug/kotlin'
@@ -86,7 +94,6 @@ dependencies {
 
     implementation(Deps.kotlin)
     implementation(Deps.androidAppCompat)
-    implementation(Deps.androidCoreKtx)
     implementation(Deps.materialComponents)
     implementation(Deps.constraintLayout)
     implementation(Deps.daggerAndroid)
