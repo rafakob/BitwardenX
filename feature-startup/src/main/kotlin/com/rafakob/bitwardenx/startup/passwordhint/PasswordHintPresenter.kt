@@ -10,7 +10,7 @@ import javax.inject.Inject
 internal class PasswordHintPresenter @Inject constructor(
         private val view: PasswordHintContract.View,
         private val passwordHintUseCase: PasswordHintUseCase,
-        private val emailValidator: EmailValidator
+        private val emailValidator: EmailValidator,
 ) : PasswordHintContract.Presenter() {
 
     override fun onViewAttached() {
@@ -28,14 +28,14 @@ internal class PasswordHintPresenter @Inject constructor(
 
     }
 
-    fun onSendResult(result: PasswordHintResult) {
+    private fun onSendResult(result: PasswordHintResult) {
         when (result) {
             PasswordHintResult.Success -> {
                 view.showSuccessPopup(R.string.passwordhint_success)
                 view.close()
             }
             is PasswordHintResult.Failure -> {
-                view.setError(error = result.msg)
+                view.setError(error = result.reason)
                 view.setSendEnabled(true)
                 view.setEmailEnabled(true)
                 view.stopLoading()
