@@ -7,5 +7,5 @@ interface SplashContract {
         fun showSomething()
     }
 
-    interface Presenter : BasePresenter
+    abstract class Presenter : BasePresenter()
 }

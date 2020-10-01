@@ -4,11 +4,11 @@ apply plugin: "kotlin-android-extensions"
 apply plugin: "kotlin-kapt"
 
 android {
-    compileSdkVersion(28)
+    compileSdkVersion(29)
 
     defaultConfig {
         minSdkVersion(21)
-        targetSdkVersion(28)
+        targetSdkVersion(29)
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
@@ -23,9 +23,17 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
     sourceSets {
         main.java.srcDirs += "src/main/kotlin"
         test.java.srcDirs += "src/test/kotlin"
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
     }
 }
 
@@ -37,6 +45,12 @@ dependencies {
     implementation(Deps.rxJava)
     implementation(Deps.rxAndroid)
     implementation(Deps.rxKotlin)
+    implementation(Deps.extensions)
     kapt(Deps.daggerCompiler)
     kapt(Deps.daggerAndroidProcessor)
+
+    testImplementation(TestDeps.junit)
+    testImplementation(TestDeps.mockk)
+    testImplementation(TestDeps.elmyr)
+
 }

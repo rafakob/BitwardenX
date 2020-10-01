@@ -6,8 +6,13 @@ dependencies {
     implementation project(':service-rest')
     implementation(Deps.androidAppCompat)
     implementation(Deps.materialComponents)
+    implementation(Deps.constraintLayout)
     implementation(Deps.daggerAndroid)
     implementation(Deps.daggerAndroidSupport)
     implementation(Deps.materialDialogs)
     implementation(Deps.materialDialogsBottomsheets)
+    implementation(Deps.rxBindings)
+    implementation(Deps.rxBindingsMaterial)
+    implementation("com.daimajia.easing:library:2.0@aar")
+    implementation("com.daimajia.androidanimations:library:2.3@aar")
 }

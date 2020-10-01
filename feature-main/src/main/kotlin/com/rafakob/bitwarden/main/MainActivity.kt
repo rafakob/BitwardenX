@@ -1,13 +1,13 @@
 package com.rafakob.bitwarden.main
 
 import android.os.Bundle
-import com.rafakob.bitwarden.R
-import com.rafakob.bitwarden.startup.StartupActivity
+import com.github.ajalt.timberkt.i
 import com.rafakob.bitwarden.base.BaseActivity
-import org.jetbrains.anko.startActivity
+import com.rafakob.bitwarden.main.R
+import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 
-class MainActivity @Inject constructor() : BaseActivity(), MainContract.View {
+class MainActivity : BaseActivity(), MainContract.View {
 
     @Inject
     lateinit var presenter: MainContract.Presenter
@@ -16,7 +16,14 @@ class MainActivity @Inject constructor() : BaseActivity(), MainContract.View {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         presenter.onViewAttached()
+    }
 
-        startActivity<StartupActivity>()
+    override fun showSomething() {
+        i { "View successfully attached!" }
+    }
+
+    override fun onDestroy() {
+        presenter.onViewDetached()
+        super.onDestroy()
     }
 }

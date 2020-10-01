@@ -10,7 +10,7 @@ internal interface VaultRetrofitApi {
 
     @POST("{endpoint}/api/accounts/password-hint")
     fun passwordHint(
-        @Path("endpoint", encoded = true) endpoint: String,
-        @Body body: PasswordHintBody
+            @Path("endpoint", encoded = true) endpoint: String,
+            @Body body: PasswordHintBody
     ): Completable
 }

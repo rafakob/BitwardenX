@@ -14,11 +14,11 @@ internal class AndroidStartupNavigator @Inject constructor(
 ) : StartupNavigator {
 
     override fun showLogin() {
-        replace(LoginFragment.newInstance())
+        replace(LoginFragment.newInstance(), false)
     }
 
     override fun showRegister() {
-        replace(RegisterFragment.newInstance())
+        replace(RegisterFragment.newInstance(), true)
     }
 
     override fun showPasswordHint(email: String) {
@@ -26,11 +26,13 @@ internal class AndroidStartupNavigator @Inject constructor(
             .show(activity.supportFragmentManager, PasswordHintFragment.TAG)
     }
 
-    private fun replace(fragment: Fragment) {
+    private fun replace(fragment: Fragment, addToBackStack: Boolean) {
         activity.supportFragmentManager.beginTransaction()
             .replace(R.id.container, fragment)
             .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-            .addToBackStack(null)
+            .apply {
+                if (addToBackStack) addToBackStack(null)
+            }
             .commit()
     }
 }
