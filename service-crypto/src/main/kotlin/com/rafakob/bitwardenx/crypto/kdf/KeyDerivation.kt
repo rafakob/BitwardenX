@@ -1,5 +1,5 @@
 package com.rafakob.bitwardenx.crypto.kdf
 
 interface KeyDerivation {
-    fun deriveKey(password: String, salt: String, type: KdfType, iterations: Int): ByteArray
+    fun deriveKey(password: ByteArray, salt: String, type: KdfType, iterations: Int): ByteArray
 }

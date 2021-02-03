@@ -4,6 +4,7 @@ dependencies {
     implementation project(":base")
     implementation project(":resources")
     implementation project(':service-rest')
+    implementation project(':service-crypto')
     implementation(Deps.androidAppCompat)
     implementation(Deps.materialComponents)
     implementation(Deps.constraintLayout)
