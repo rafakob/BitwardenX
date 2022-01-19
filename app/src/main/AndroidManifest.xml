@@ -26,7 +26,7 @@
         </activity>
 
         <activity
-            android:name="com.rafakob.bitwardenx.startup.StartupActivity" />
+            android:name="com.rafakob.bitwardenx.startup.startup.StartupActivity" />
         <activity android:name="com.rafakob.bitwardenx.main.MainActivity" />
 
     </application>

@@ -1,4 +1,4 @@
-package com.rafakob.bitwardenx.startup
+package com.rafakob.bitwardenx.startup.startup
 
 import com.rafakob.bitwardenx.base.BaseActivity
 import com.rafakob.bitwardenx.scope.ActivityScope

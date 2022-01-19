@@ -3,7 +3,7 @@ package com.rafakob.bitwardenx.startup.login
 import com.rafakob.bitwardenx.base.BasePresenter
 import io.reactivex.Flowable
 
-interface LoginContract {
+internal interface LoginContract {
     interface View {
         fun emailChanged(): Flowable<String>
         fun passwordChanged(): Flowable<String>

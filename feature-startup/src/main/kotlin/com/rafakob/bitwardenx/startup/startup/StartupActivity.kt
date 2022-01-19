@@ -1,7 +1,8 @@
-package com.rafakob.bitwardenx.startup
+package com.rafakob.bitwardenx.startup.startup
 
 import android.os.Bundle
 import com.rafakob.bitwardenx.base.BaseActivity
+import com.rafakob.bitwardenx.startup.R
 import com.rafakob.bitwardenx.startup.navigator.StartupNavigator
 import javax.inject.Inject
 

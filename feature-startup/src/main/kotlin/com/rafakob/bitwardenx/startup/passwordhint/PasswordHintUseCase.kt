@@ -9,7 +9,7 @@ import io.reactivex.Single
 import javax.inject.Inject
 
 @AppScope
-class PasswordHintUseCase @Inject constructor(
+internal class PasswordHintUseCase @Inject constructor(
         private val vaultApi: VaultApi
 ) : UseCaseParameterized<PasswordHintUseCase.Params, Single<PasswordHintResult>> {
 

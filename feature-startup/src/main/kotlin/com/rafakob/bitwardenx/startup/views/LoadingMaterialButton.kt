@@ -1,4 +1,4 @@
-package com.rafakob.bitwardenx.startup
+package com.rafakob.bitwardenx.startup.views
 
 import android.content.Context
 import android.util.AttributeSet
@@ -6,6 +6,7 @@ import android.view.View
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
+import com.rafakob.bitwardenx.startup.R
 import kotlinx.android.synthetic.main.view_loading_button.view.*
 
 
@@ -33,7 +34,7 @@ class LoadingMaterialButton @JvmOverloads constructor(
                         loadingText = getString(R.styleable.LoadingMaterialButton_loadingText) ?: ""
 
                         val minHeight = getDimensionPixelSize(
-                                R.styleable.LoadingMaterialButton_android_minHeight,
+                            R.styleable.LoadingMaterialButton_android_minHeight,
                                 0
                         )
 

@@ -4,7 +4,7 @@ import android.content.Context
 import com.rafakob.bitwardenx.base.Navigator
 import com.rafakob.bitwardenx.main.MainActivity
 import com.rafakob.bitwardenx.splash.SplashActivity
-import com.rafakob.bitwardenx.startup.StartupActivity
+import com.rafakob.bitwardenx.startup.startup.StartupActivity
 import splitties.activities.start
 import javax.inject.Inject
 

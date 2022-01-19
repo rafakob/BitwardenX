@@ -9,7 +9,7 @@ import io.reactivex.Single
 import javax.inject.Inject
 
 @AppScope
-class LoginUseCase @Inject constructor(
+internal class LoginUseCase @Inject constructor(
         private val identityApi: IdentityApi
 ) : UseCaseParameterized<LoginUseCase.Params, Single<LoginResult>> {
 

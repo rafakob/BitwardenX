@@ -68,7 +68,7 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.rafakob.bitwardenx.startup.LoadingMaterialButton
+            <com.rafakob.bitwardenx.startup.views.LoadingMaterialButton
                 android:id="@+id/login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

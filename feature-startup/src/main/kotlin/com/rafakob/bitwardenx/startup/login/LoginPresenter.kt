@@ -8,11 +8,11 @@ import io.reactivex.rxkotlin.withLatestFrom
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
-class LoginPresenter @Inject constructor(
-        private val view: LoginContract.View,
-        private val startupNavigator: StartupNavigator,
-        private val loginUseCase: LoginUseCase,
-        private val emailValidator: EmailValidator
+internal class LoginPresenter @Inject constructor(
+    private val view: LoginContract.View,
+    private val startupNavigator: StartupNavigator,
+    private val loginUseCase: LoginUseCase,
+    private val emailValidator: EmailValidator
 ) : LoginContract.Presenter() {
 
     override fun onViewAttached() {
